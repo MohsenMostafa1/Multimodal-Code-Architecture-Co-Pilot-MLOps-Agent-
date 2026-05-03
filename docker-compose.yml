@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  co-pilot:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - OLLAMA_HOST=host.docker.internal  # to reach local Ollama
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # Profile under 100ms per query (as per Mohsen's standards)
+    # Use Prometheus metrics endpoint on port 9090 for monitoring

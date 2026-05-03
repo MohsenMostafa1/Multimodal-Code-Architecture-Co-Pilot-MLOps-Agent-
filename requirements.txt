@@ -1,0 +1,11 @@
+fastapi==0.110.0
+uvicorn[standard]==0.23.2
+python-multipart
+ollama
+pinecone-client>=3.0.0
+langchain-community
+langchain-text-splitters
+unstructured[md]
+huggingface_hub
+sentence-transformers
+python-dotenv
